@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Práctica 7</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"
+    />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  </head>
+  <body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <!-- Cabecera de la aplicación -->
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Título de la aplicación -->
+          <span class="mdl-layout-title">Práctica 7</span>
+        </div>
+      </header>
+      <!-- Menú de la aplicación -->
+      <div class="mdl-layout__drawer">
+        <nav class="mdl-navigation">
+          <a
+            class="mdl-navigation__link"
+            id="nav-sensor-list"
+            onclick="viewPage('page-sensor-list');"
+            >Listado de sensores</a
+          >
+          <a
+            class="mdl-navigation__link"
+            id="nav-sensor-add"
+            onclick="viewPage('page-sensor-add');"
+            >Agregar sensor</a
+          >
+        </nav>
+      </div>
+      <!-- Contenido de la aplicación -->
+      <main class="mdl-layout__content">
+        <section id="page-sensor-list">
+          <div class="page-content">
+            <ul class="demo-list-item mdl-list" id="sensor-list"></ul>
+          </div>
+        </section>
+        <section id="page-sensor-add" style="display: none;">
+          <div class="page-content">
+            <!--Se agrega, al contenido de la aplicación-->
+            <div>
+              <div
+                class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+              >
+                <input
+                  class="mdl-textfield__input"
+                  type="text"
+                  id="sensor-name"
+                />
+                <label class="mdl-textfield__label" for="sensor-name"
+                  >Nombre del Sensor</label
+                >
+              </div>
+              <button
+                class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent"
+                id="btn-sensor-add"
+              >
+                Crear
+              </button>
+            </div>
+          </div>
+
+          <!--Se agrega, al contenido de la aplicación, un componente de tipo snackbar-->
+          <div id="mensaje-interactivo" class="mdl-js-snackbar mdl-snackbar">
+            <div class="mdl-snackbar__text"></div>
+            <button class="mdl-snackbar__action" type="button"></button>
+          </div>
+        </section>
+      </main>
+      <!-- Pie de la aplicación -->
+      <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer__left-section">
+          <ul class="mdl-mini-footer__link-list">
+            <li><a href="#">Enlace 3</a></li>
+            <li><a href="#">Enlace 4</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <!--Agrega el script con la interactividad-->
+<script src="js/script.js"></script>
+
+</html>
